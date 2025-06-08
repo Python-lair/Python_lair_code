@@ -1,0 +1,56 @@
+import turtle as tr
+
+t = tr.Turtle()
+t.speed(1)
+t.pensize(8)
+
+def koleso (r):
+	t.pensize(10)
+	t.pendown()
+	t.pencolor("brown")
+	t.circle(r)
+	t.penup()
+	t.left(90)
+	t.forward(r * 0.8)
+	t.right(90)
+	t.pendown()
+	t.fillcolor("brown")
+	t.begin_fill()
+	t.circle(r * 0.2)
+	t.end_fill()
+	t.penup()
+	t.left(90)
+	t.forward(r * 0.1)
+	t.right(90)
+	t.pendown()
+	for i in range(10):
+		t.right(36)
+		t.forward(r * 0.8 + 5)
+		t.forward(r * -0.8 - 5)
+	
+	
+t.pencolor("red")
+t.penup()
+t.fillcolor("grey")
+t.goto(-100, -25)
+t.begin_fill()
+t.pendown()
+t.goto(100, -25)
+t.goto(100, 0)
+t.goto(50, 25)
+t.goto(0, 70)
+t.goto(-75, 100)
+t.goto(-100, 100)
+t.goto(-100, -25)
+t.end_fill()
+
+t.penup()
+t.goto(0, -50)
+koleso(50)
+
+t.pencolor("black")
+t.penup()
+t.goto(-100, 100)
+t.pendown()
+t.goto(-500, 150)
+
